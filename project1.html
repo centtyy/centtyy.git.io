@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="ff.css">
+</head>
+<body>
+  
+  <center>
+    <h1>LOG IN FORM</h1>
+    <input type="text" id="username" placeholder="Username"><br><br>
+
+<input type="password" id="password" placeholder="Password"><br>
+<input type="checkbox" onclick="togglePassword()"> Show Password<br><br>
+
+<button onclick="login()">Login</button>
+</center>
+<script>
+ function togglePassword() {
+    let passwordField = document.getElementById("password");
+    if (passwordField.type === "password") {
+      passwordField.type = "text";
+    } else {
+      passwordField.type = "password";
+    }
+  }
+
+  function login() {
+    let correctUsername = "cen";
+    let correctPassword = "cen";
+
+    let username = document.getElementById("username").value;
+    let password = document.getElementById("password").value;
+
+    if (username === correctUsername && password === correctPassword) {
+      alert("Login successfully");
+    } 
+    else if (username === correctUsername && password !== correctPassword) {
+      alert("Password is incorrect");
+    }
+    else if (username !== correctUsername && password === correctPassword) {
+      alert("Username is incorrect");
+    }
+    else {
+      alert("Username and Password are incorrect");
+    }
+  }
+  
+</script>
+
+<a href="cen11.html" class="btn back">Back</a>
+
+</body>
+</html>
